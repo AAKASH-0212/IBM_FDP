@@ -213,7 +213,7 @@ AI Chat Output
 screenshots/output.png
 ⚙️ Installation Guide
 Clone the Repository
-git clone https://github.com/your-username/Smart-Study-Generator-Agent.git
+git clone https://github.com/AAKASH-0212/IBM_FDP.git
 Navigate to the Project
 cd Smart-Study-Generator-Agent
 Install LangFlow
