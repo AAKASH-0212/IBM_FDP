@@ -1,274 +1,278 @@
-# 📚 Smart Study Generator Agent
+📚 Smart Study Generator Agent
+🚀 AI-Powered Smart Study Assistant using LangFlow, IBM watsonx.ai, IBM Granite Models & Retrieval-Augmented Generation (RAG)
+📖 Project Overview
 
-> **An AI-powered Smart Study Assistant built using LangFlow, IBM watsonx.ai, IBM Granite Models, and Retrieval-Augmented Generation (RAG).**
+The Smart Study Generator Agent is an intelligent AI-powered learning assistant designed to help students organize and simplify their study materials. Instead of spending hours creating notes, flashcards, and quizzes manually, students can upload their educational documents and instantly receive personalized learning resources.
 
+The system leverages Retrieval-Augmented Generation (RAG) with IBM Granite Foundation Models to understand uploaded documents, retrieve relevant information, and generate accurate, context-aware responses.
 
----
+Whether you're preparing for exams, revising concepts, or learning a new subject, the Smart Study Generator Agent acts as your personal AI study companion.
 
-# 📖 Overview
+🎯 Problem Statement
+Problem Statement No. 13 – Smart Study Generator Agent
 
-The **Smart Study Generator Agent** is an AI-powered educational assistant that helps students transform scattered study materials into structured, personalized learning resources.
+Modern students often struggle with large volumes of educational content scattered across:
 
-Students can upload lecture notes, PDFs, textbooks, or research papers, and the system automatically generates:
+📄 Lecture Notes
+📚 Textbooks
+📑 Research Papers
+🎥 YouTube Tutorials
+🌐 Online Learning Resources
 
-* 📄 Smart Summaries
-* 📝 Revision Notes
-* 🧠 Flashcards
-* ❓ MCQs & Practice Quizzes
-* 📅 Personalized Study Plans
-* 💬 AI-powered Question Answering
+Traditional study applications only provide static notes or flashcards and cannot understand the actual learning material uploaded by students.
 
-The project uses **Retrieval-Augmented Generation (RAG)** with **IBM Granite Foundation Models** to provide accurate, context-aware responses based on uploaded documents.
+The Smart Study Generator Agent solves this problem by using Agentic AI and Retrieval-Augmented Generation (RAG) to automatically analyze study materials and generate personalized educational content tailored to each learner.
 
----
+✨ Key Features
+📂 Document Upload
 
-# 🎯 Problem Statement
+Supports multiple study material formats:
 
-### Problem Statement No. 13 – Smart Study Generator Agent
+PDF
+DOCX
+TXT
+🤖 AI-Powered Document Understanding
 
-Students today face an overwhelming amount of information spread across lecture notes, textbooks, research papers, YouTube tutorials, and online resources.
+Automatically reads and understands uploaded documents using IBM Granite Foundation Models.
 
-Traditional study tools only provide static notes or flashcards and fail to adapt to individual learning needs.
+📄 Smart Summary Generation
 
-The Smart Study Generator Agent addresses these challenges by providing an intelligent AI-powered study companion capable of understanding uploaded documents, retrieving relevant information, and generating personalized study content.
+Generates concise and accurate summaries that highlight the most important concepts.
 
----
+📝 Revision Notes
 
-# 🚀 Features
+Creates easy-to-understand revision notes for quick exam preparation.
 
-✅ Upload PDF, DOCX, TXT study materials
+🧠 Flashcard Generation
 
-✅ AI-powered document understanding
+Automatically generates interactive flashcards for effective memory retention.
 
-✅ Intelligent document summarization
+❓ MCQ & Quiz Generator
 
-✅ Flashcard generation
+Creates multiple-choice questions and practice quizzes based on uploaded content.
 
-✅ MCQ & Quiz generation
+📅 Personalized Study Planner
 
-✅ Personalized study plan generation
+Generates customized daily study schedules based on the uploaded material.
 
-✅ Question Answering using uploaded notes
+💬 AI Question Answering
 
-✅ Retrieval-Augmented Generation (RAG)
+Allows students to ask questions directly from their uploaded notes and receive context-aware answers.
 
-✅ Context-aware responses
+🔍 Retrieval-Augmented Generation (RAG)
 
-✅ Interactive AI Study Assistant
+Retrieves only the most relevant information from uploaded documents before generating responses, ensuring greater accuracy and reduced hallucinations.
 
----
+🎓 Interactive AI Study Assistant
 
-# 🛠️ Technology Stack
+Provides continuous support throughout the student's learning journey.
 
-| Technology                           | Purpose                      |
-| ------------------------------------ | ---------------------------- |
-| LangFlow                             | Visual AI Workflow Builder   |
-| IBM watsonx.ai                       | AI Foundation Model Platform |
-| IBM Granite 4.0 H Small              | Large Language Model         |
-| IBM Granite Embedding Model          | Semantic Embeddings          |
-| Retrieval-Augmented Generation (RAG) | Context-aware Retrieval      |
-| Chroma Vector Database               | Vector Storage               |
-| Knowledge Base                       | Document Retrieval           |
-| Python                               | Backend Runtime              |
+🛠️ Technology Stack
+Technology	Purpose
+LangFlow	Visual AI Workflow Builder
+IBM watsonx.ai	AI Foundation Model Platform
+IBM Granite Foundation Model	Large Language Model
+IBM Granite Embedding Model	Semantic Vector Embeddings
+Retrieval-Augmented Generation (RAG)	Context-Aware Retrieval
+Chroma Vector Database	Vector Storage & Knowledge Base
+Python	Backend Development
+LangChain	AI Pipeline Integration
+Document Loader	Reads Uploaded Documents
+Text Splitter	Splits Documents into Chunks
+🏗️ System Architecture
+                     Student
+                        │
+        Upload Study Material / Ask Questions
+                        │
+                        ▼
+                LangFlow Workflow
+                        │
+                        ▼
+                Document Reader
+                        │
+                        ▼
+                  Text Splitter
+                        │
+                        ▼
+          IBM Granite Embedding Model
+                        │
+                        ▼
+             Chroma Vector Database
+            (Knowledge Base / RAG)
+                        │
+         Retrieve Relevant Document Chunks
+                        │
+                        ▼
+                IBM watsonx.ai
+         IBM Granite Foundation Model
+                        │
+                        ▼
+          Smart Study Generator Agent
+                        │
+ ┌──────────┬──────────┬──────────┬──────────┬──────────┐
+ │          │          │          │          │
+Summary  Notes   Flashcards   MCQs   Study Plan
+                        │
+                        ▼
+                AI Chat Response
+🔄 Workflow
+Step 1
 
----
+The student uploads study materials such as lecture notes, PDFs, or textbooks.
 
-# 🏗️ System Architecture
+↓
 
-```text
-                             Student
-                                │
-                Upload PDF / Ask Questions
-                                │
-                                ▼
-                         LangFlow Workflow
-                                │
-                                ▼
-                           Read File
-                                │
-                                ▼
-                           Split Text
-                                │
-                                ▼
-                    IBM Granite Embedding Model
-                                │
-                                ▼
-                     Chroma Vector Database
-                     (Knowledge Base / RAG)
-                                │
-                    Retrieve Relevant Chunks
-                                │
-                                ▼
-                      IBM watsonx.ai
-                    IBM Granite Foundation Model
-                                │
-                                ▼
-                  Smart Study Generator Agent
-                                │
-        ┌─────────────┬─────────────┬─────────────┐
-        │             │             │             │
-     Summary     Flashcards      MCQs      Study Plan
-        │
-        ▼
-                     Chat Output
-```
+Step 2
 
----
+The Document Loader extracts all textual content.
 
-# 🔄 Workflow
+↓
 
-1. Student uploads study material.
-2. Read File extracts document content.
-3. Text is divided into smaller chunks.
-4. IBM Granite Embedding Model generates vector embeddings.
-5. Embeddings are stored in the Chroma Knowledge Base.
-6. RAG retrieves the most relevant content.
-7. IBM Granite Foundation Model generates intelligent responses.
-8. Smart Study Agent produces personalized study resources.
+Step 3
 
----
+The Text Splitter divides large documents into smaller chunks.
 
-# 🤖 Role of Agentic AI
+↓
 
-Unlike traditional chatbots, the Smart Study Generator functions as an intelligent **Agentic AI** system.
+Step 4
+
+IBM Granite Embedding Model converts text chunks into semantic vector embeddings.
+
+↓
+
+Step 5
+
+The embeddings are stored in the Chroma Vector Database.
+
+↓
+
+Step 6
+
+When the student asks a question, the RAG pipeline retrieves the most relevant document chunks.
+
+↓
+
+Step 7
+
+IBM Granite Foundation Model generates an accurate, context-aware response.
+
+↓
+
+Step 8
+
+The Smart Study Generator produces:
+
+Smart Summaries
+Revision Notes
+Flashcards
+MCQs
+Personalized Study Plans
+AI-powered Answers
+🤖 Agentic AI Capabilities
+
+Unlike traditional chatbots, this system functions as an intelligent Agentic AI Assistant.
 
 The AI agent autonomously:
 
-* Understands uploaded documents
-* Retrieves relevant knowledge using RAG
-* Generates summaries
-* Creates revision notes
-* Builds flashcards
-* Generates quizzes
-* Creates personalized study plans
-* Answers contextual questions
+📖 Understands uploaded documents
+🔍 Retrieves relevant knowledge using RAG
+📝 Generates summaries
+📄 Creates revision notes
+🧠 Produces flashcards
+❓ Generates quizzes
+📅 Builds personalized study plans
+💬 Answers contextual questions
+🎯 Adapts to individual learning requirements
 
-The agent continuously adapts to the student's learning needs, making learning more interactive and efficient.
+This creates a dynamic and personalized learning experience.
 
----
+🌟 Project Highlights
 
-# 💡 Novelty & Uniqueness
+✅ Agentic AI-Based Learning Assistant
 
-* Agentic AI-powered learning assistant
-* Retrieval-Augmented Generation (RAG)
-* Context-aware responses using uploaded documents
-* Automated study resource generation
-* Personalized learning experience
-* Intelligent exam preparation
-* Built using IBM Granite Foundation Models
-* Visual AI workflow using LangFlow
+✅ IBM Granite Foundation Models
 
----
+✅ Retrieval-Augmented Generation (RAG)
 
+✅ Context-Aware AI Responses
 
----
+✅ Intelligent Document Understanding
 
-# 📸 Screenshots
+✅ Automated Study Resource Generation
 
-### LangFlow Workflow
+✅ Personalized Learning Experience
 
-```
+✅ Interactive Exam Preparation
+
+✅ Visual AI Workflow using LangFlow
+
+📸 Screenshots
+LangFlow Workflow
 screenshots/workflow.png
-```
-
-### Chat Output
-
-```
+AI Chat Output
 screenshots/output.png
-```
-
----
-
-# ⚙️ Installation
-
-Clone the repository
-
-```bash
-git clone https://github.com/Pritvyas1510/Smart-Study-Generator-Agent.git
-```
-
-Move into the project
-
-```bash
+⚙️ Installation Guide
+Clone the Repository
+git clone https://github.com/your-username/Smart-Study-Generator-Agent.git
+Navigate to the Project
 cd Smart-Study-Generator-Agent
-```
-
 Install LangFlow
-
-```bash
 pip install langflow
-```
-
-Start LangFlow
-
-```bash
+Launch LangFlow
 langflow run
-```
-
-Open
-
-```
+Open in Browser
 http://localhost:7860
-```
+Configure the Following Credentials
+IBM watsonx.ai API Key
+IBM Project ID
+IBM Endpoint URL
+Import the Smart Study Generator Flow
 
-Import the Smart Study Generator Flow.
+After configuration, import the provided LangFlow workflow to begin using the application.
 
-Configure:
+💬 Example Prompts
+Summarize the uploaded lecture notes.
+Generate revision notes for this chapter.
+Create 20 multiple-choice questions.
+Generate flashcards from the uploaded PDF.
+Explain Artificial Intelligence in simple language.
+Explain Machine Learning with examples.
+List the most important exam topics.
+Create a 7-day study timetable.
+What are the advantages of Artificial Intelligence?
+Ask questions only from my uploaded notes.
+🚀 Future Enhancements
+🎤 Voice-Based AI Assistant
+🖼️ OCR Support for Handwritten Notes
+🌍 Multi-Language Learning
+📊 Student Performance Dashboard
+📈 AI-Based Performance Prediction
+🧠 Concept Map Generation
+📱 Android & iOS Mobile Application
+☁️ Cloud Deployment
+🔔 Smart Revision Reminders
+🎯 Adaptive Learning Recommendations
+👨‍💻 Developer
+AAKASH KUSHWAHA
 
-* IBM watsonx.ai API Key
-* IBM Project ID
-* IBM Endpoint
+Computer Science Assistant Professor | Full Stack Developer | AI & Machine Learning Enthusiast
 
----
+Passionate about developing AI-powered applications that simplify education, improve productivity, and create intelligent learning experiences using modern technologies such as IBM watsonx.ai, IBM Granite Models, LangFlow, Python, and Retrieval-Augmented Generation (RAG).
 
-# 🧪 Sample Prompts
+🙏 Acknowledgements
 
-* Summarize the uploaded notes.
-* Explain Artificial Intelligence.
-* Generate 10 MCQs.
-* Create revision flashcards.
-* List important exam topics.
-* Create a 7-day study plan.
-* Explain Machine Learning.
-* What are the advantages of AI?
+Special thanks to:
 
----
+IBM SkillsBuild
+IBM watsonx.ai
+IBM Granite Foundation Models
+LangFlow Community
+Chroma Vector Database
+Open Source AI Community
+📄 License
 
-# 📈 Future Enhancements
+This project has been developed for educational, research, and innovation purposes as part of the IBM SkillsBuild University Engagement Program.
 
-* 🎤 Voice-based interaction
-* 🖼️ OCR for handwritten notes
-* 🌐 Multi-language support
-* 📊 Student progress dashboard
-* 📈 Performance prediction
-* 🧠 Concept map generation
-* 📱 Mobile application
-* ☁️ Cloud deployment
+⭐ Support the Project
 
----
-
-# 👨‍💻 Author
-
-**Prit Vyas**
-
-Assistant Professor | MERN Stack Developer | AI Enthusiast
-
----
-
-# 🙏 Acknowledgements
-
-* IBM SkillsBuild
-* IBM watsonx.ai
-* IBM Granite Foundation Models
-* LangFlow Community
-* Chroma Database
-
----
-
-# 📄 License
-
-This project is developed for educational and research purposes as part of the **IBM SkillsBuild University Engagement Program**.
-
----
-
-⭐ If you found this project useful, don't forget to **Star ⭐ the repository**.
+If you found this project helpful, consider giving the repository a ⭐ on GitHub. Your support encourages future development and helps others discover the project.
